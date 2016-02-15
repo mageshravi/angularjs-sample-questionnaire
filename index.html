@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="Questionnaire">
+  <head>
+    <meta charset="utf-8">
+    <title>Questionnaire | Angular JS code samples</title>
+    <!-- Turn on responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Turn off zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Angular JS -->
+    <script type="text/javascript" src="js/lib/angular.min.js"></script>
+    <script type="text/javascript" src="js/lib/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/lib/angular-sanitize.min.js"></script>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- Page assets -->
+    <link rel="stylesheet" href="css/master.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="js/app.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/controllers.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <header class="wbn-page-header">
+      <div class="container">
+        <h1>Questionnaire</h1>
+      </div>
+    </header>
+
+    <section id="view-content">
+      <div class="container">
+
+        <div ng-view></div>
+
+      </div>
+    </section>
+  </body>
+</html>

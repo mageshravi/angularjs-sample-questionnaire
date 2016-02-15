@@ -1,0 +1,25 @@
+<div>
+  <a href="#/add" class="btn btn-success pull-right"><span class="glyphicon glyphicon-plus"></span> New Question</a>
+  <h2>Questions List</h2>
+  <div class="clearfix"></div>
+</div>
+
+<!-- Table -->
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>S. No.</th>
+      <th>Question</th>
+      <th>No. of options</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="question in questions track by $index">
+      <td>{{$index + 1}}</td>
+      <td>{{question.content}}</td>
+      <td>{{no_of_options($index)}}</td>
+      <td>Edit | Delete</td>
+    </tr>
+  </tbody>
+</table>

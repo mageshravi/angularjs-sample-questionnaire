@@ -1,0 +1,41 @@
+.wbn-page-header {
+  color: white;
+  background-color: #1e69c1;
+}
+.wbn-page-header > .container {
+  padding: 1px 0 0 0;
+}
+.qn-content {
+  padding: 15px;
+  background-color: rgba(196, 219, 231, .5);
+}
+.qn-content p {
+  margin: 0;
+  font-size: 16px;
+}
+[contenteditable=true]:empty:before{
+  color: rgb(156, 156, 156);
+  content: attr(placeholder);
+  display: block; /* For Firefox */
+}
+[contenteditable=true]:focus {
+  outline: none;
+}
+div[contenteditable=true] {
+  padding: 5px;
+}
+.form-group > [type=radio] {
+  margin-top: 3px;
+  float: left;
+}
+.form-group > [type=radio] + p {
+  margin-left: 20px;
+}
+.range-group-addon {
+  padding: 6px;
+}
+.range-group [type=range] {
+  margin: 6px 4px 7px 4px;
+  display: inline-block;
+  width: auto;
+}

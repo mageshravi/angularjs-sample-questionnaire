@@ -1,0 +1,53 @@
+<section class="col-sm-6 col-sm-offset-3">
+  <h2>Add Question</h2>
+  <form ng-submit="add_question()">
+    <div class="form-group qn-content">
+      <!-- <label>Question</label> -->
+      <p contenteditable="true" placeholder="Your question here" ng-model="question.content"></p>
+    </div>
+    <!-- No. of options -->
+    <div class="form-group">
+      <label for="no_of_options">No. of options</label>
+      <div class="range-group">
+        <span class="range-group-addon">2</span>
+        <input type="range" min="2" max="5" step="1" ng-model="no_of_options" />
+        <span class="range-group-addon">5</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input type="radio" name="answer" value="0" ng-model="question.answer">
+      <p contenteditable="true" placeholder="Option A" ng-model="question.options[0]"></p>
+    </div>
+
+    <div class="form-group">
+      <input type="radio" name="answer" value="1" ng-model="question.answer">
+      <p contenteditable="true" placeholder="Option B" ng-model="question.options[1]"></p>
+    </div>
+
+    <div class="form-group" ng-show="is_option_visible(2)">
+      <input type="radio" name="answer" value="2" ng-model="question.answer">
+      <p contenteditable="true" placeholder="Option C" ng-model="question.options[2]"></p>
+    </div>
+
+    <div class="form-group" ng-show="is_option_visible(3)">
+      <input type="radio" name="answer" value="3" ng-model="question.answer">
+      <p contenteditable="true" placeholder="Option D" ng-model="question.options[3]"></p>
+    </div>
+
+    <div class="form-group" ng-show="is_option_visible(4)">
+      <input type="radio" name="answer" value="4" ng-model="question.answer">
+      <p contenteditable="true" placeholder="Option E" ng-model="question.options[4]"></p>
+    </div>
+
+    <button type="submit" class="btn btn-success">Add Question</button>
+  </form>
+
+  <!-- <strong>Preview</strong>
+  <h3 ng-bind="question.content"></h3>
+  <ul>
+    <li ng-repeat="option in question.options track by $index">
+      {{option}}
+    </li>
+  </ul> -->
+</section>
