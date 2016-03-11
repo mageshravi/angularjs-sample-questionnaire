@@ -1,5 +1,6 @@
 <div>
-  <a href="#/add" class="btn btn-success pull-right"><span class="glyphicon glyphicon-plus"></span> New Question</a>
+  <a href="#/add" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-plus"></span> New Question</a>
+  <a href="#/preview" class="btn btn-default pull-right" style="margin-right: 10px">Preview</a>
   <h2>Questions List</h2>
   <div class="clearfix"></div>
 </div>
@@ -19,7 +20,9 @@
       <td>{{$index + 1}}</td>
       <td>{{question.content}}</td>
       <td>{{no_of_options($index)}}</td>
-      <td>Edit | Delete</td>
+      <td>
+        <a href="#/edit/{{$index}}">Edit</a>
+      </td>
     </tr>
   </tbody>
 </table>

@@ -1,11 +1,9 @@
 <section class="col-sm-6 col-sm-offset-3">
-  <h2>Add Question</h2>
-  <form ng-submit="add_question()">
+  <h2>Edit Question</h2>
+  <form ng-submit="update_question()">
     <div class="form-group qn-content">
       <!-- <label>Question</label> -->
-      <p contenteditable="true" strip-br="true"
-        placeholder="Your question here" ng-model="question.content"></p>
-      <!-- <textarea ng-model="question.content"></textarea> -->
+      <p contenteditable="true" placeholder="Your question here" ng-model="question.content"></p>
     </div>
     <!-- No. of options -->
     <div class="form-group">
@@ -42,7 +40,9 @@
       <p contenteditable="true" placeholder="Option E" ng-model="question.options[4]"></p>
     </div>
 
-    <button type="submit" class="btn btn-primary">Add</button>
+    <button type="button" class="btn btn-danger pull-right" ng-click="delete_question()">Delete</button>
+
+    <button type="submit" class="btn btn-primary">Update</button>
     &nbsp;
     <a href="#/list">Back</a>
   </form>
